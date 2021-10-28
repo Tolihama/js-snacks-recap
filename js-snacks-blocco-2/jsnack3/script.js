@@ -44,7 +44,7 @@ const nGuest = 3;
 
 // Guests random generator
 for (let i = 0; i < nGuest; i++) {
-    const randNameIndex = Math.floor(Math.random() * (names.length - 1));
-    const randSurnameIndex = Math.floor(Math.random() * (surnames.length - 1));
+    const randNameIndex = Math.floor(Math.random() * names.length);
+    const randSurnameIndex = Math.floor(Math.random() * surnames.length);
     console.log(`${names[randNameIndex]} ${surnames[randSurnameIndex]}`);
 }

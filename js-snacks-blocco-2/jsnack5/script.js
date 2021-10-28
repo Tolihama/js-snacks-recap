@@ -37,11 +37,10 @@ const arrTwoLength = Math.floor(Math.random() * maxLength) + 1;
 
 // Initial random generation arrays
 for (let i = 0; i < arrOneLength; i++) {
-    arrOne.push(randomElements[Math.floor(Math.random() * (randomElements.length - 1))]);
+    arrOne.push(randomElements[Math.floor(Math.random() * (randomElements.length))]);
 }
-
 for (let i = 0; i < arrTwoLength; i++) {
-    arrTwo.push(randomElements[Math.floor(Math.random() * (randomElements.length - 1))]);
+    arrTwo.push(randomElements[Math.floor(Math.random() * (randomElements.length))]);
 }
 
 // Input array
@@ -51,14 +50,13 @@ console.log(arrTwo);
 
 // Equalize array
 while (arrOne.length < arrTwo.length) {
-    arrOne.push(randomElements[Math.floor(Math.random() * (randomElements.length - 1))]);
+    arrOne.push(randomElements[Math.floor(Math.random() * (randomElements.length))]);
 }
 while (arrOne.length > arrTwo.length) {
-    arrTwo.push(randomElements[Math.floor(Math.random() * (randomElements.length - 1))]);
+    arrTwo.push(randomElements[Math.floor(Math.random() * (randomElements.length))]);
 }
 
 // Output array
 console.log('Array di output:');
 console.log(arrOne);
 console.log(arrTwo);
-
