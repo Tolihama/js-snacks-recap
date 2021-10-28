@@ -9,26 +9,26 @@ const scriptOutput = document.getElementById('script-output');
 // Btn Script
 btnScriptActivate.addEventListener('click', function() {
     // Var init
-    let number = 0;
+    let numInput = '';
     let sum = 0;
     let media = 0;
 
     // Number input
     do {
-        number = prompt('Inserisci un numero di quattro cifre.').trim();
-    } while (number.length !== 4);
+        numInput = prompt('Inserisci un numero di quattro cifre.').trim();
+    } while (numInput.length !== 4);
 
     // Sum
-    for (let i = 0; i < number.length; i++) {
-        sum += parseInt(number[i]);
+    for (let i = 0; i < numInput.length; i++) {
+        sum += parseInt(numInput[i]);
     }
 
     // Media
-    media = sum / number.length;
+    media = sum / numInput.length;
 
     // Output
     scriptOutput.innerHTML = `
-    <div>Numero inserito: ${number}</div>
+    <div>Numero inserito: ${numInput}</div>
     <div>Somma: ${sum}</div>
     <div>Media: ${media}</div>`;
 });
