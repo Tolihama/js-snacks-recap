@@ -29,10 +29,11 @@ const randomElements = [
 
 const arrOne = [];
 const arrTwo = [];
+const maxLength = 20;
 
 // Initial param
-const arrOneLength = 9;
-const arrTwoLength = 4;
+const arrOneLength = Math.floor(Math.random() * maxLength) + 1;
+const arrTwoLength = Math.floor(Math.random() * maxLength) + 1;
 
 // Initial random generation arrays
 for (let i = 0; i < arrOneLength; i++) {
@@ -43,7 +44,8 @@ for (let i = 0; i < arrTwoLength; i++) {
     arrTwo.push(randomElements[Math.floor(Math.random() * (randomElements.length - 1))]);
 }
 
-//
+// Input array
+console.log('Array di partenza:');
 console.log(arrOne);
 console.log(arrTwo);
 
@@ -55,7 +57,8 @@ while (arrOne.length > arrTwo.length) {
     arrTwo.push(randomElements[Math.floor(Math.random() * (randomElements.length - 1))]);
 }
 
-// 
+// Output array
+console.log('Array di output:');
 console.log(arrOne);
 console.log(arrTwo);
 
