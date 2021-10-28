@@ -16,7 +16,7 @@ btnScriptActivate.addEventListener('click', function() {
     // Number input
     do {
         numInput = prompt('Inserisci un numero di quattro cifre.').trim();
-    } while (numInput.length !== 4);
+    } while (numInput.length !== 4 || isNaN(parseInt(numInput)));
 
     // Sum
     for (let i = 0; i < numInput.length; i++) {
